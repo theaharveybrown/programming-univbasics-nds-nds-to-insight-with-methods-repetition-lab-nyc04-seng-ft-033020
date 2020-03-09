@@ -29,8 +29,9 @@ def list_of_directors(source)
   names = []
   i = 0
   while i < source.length do
-    names << source[i]
-  names = source.keys
+    names << source[i][:name]
+    i += 1
+  end
   names
 end
 
@@ -42,7 +43,7 @@ def total_gross(source)
   # 2. list_of_directors: names provides an Array of directors names (use
   #
   directors = directors_totals(source)
-  names = list_of_directors(directors)
+  names = list_of_directors(source)
   total = 0
   i = 0
   while i < names.length do
