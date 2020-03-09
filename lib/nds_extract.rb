@@ -26,6 +26,10 @@ end
 
 def list_of_directors(source)
   # Write this implementation
+  names = []
+  i = 0
+  while i < source.length do
+    names << source[i]
   names = source.keys
   names
 end
